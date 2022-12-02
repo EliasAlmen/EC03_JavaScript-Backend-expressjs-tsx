@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 //Controller PredefinedProducts
 const PredefinedProductsController = require('./controllers/PredefinedProductsController')
-app.use('/api/predefinedproducts', PredefinedProductsController)
+app.use('/api/products', PredefinedProductsController)
 
 //Controller CrudProducts
 const CrudProductsController = require('./controllers/CrudProductsController')
