@@ -1,4 +1,4 @@
-const crudProducts = [
+const PredefinedProducts = [
     {
         tag: "",
         articleNumber: "d3984cd9-f121-4981-8d03-83198d441379",
@@ -242,4 +242,4 @@ const crudProducts = [
             "https://win22imgstorage.blob.core.windows.net/images/winter-boots.png",
     },
 ];
-module.exports = crudProducts;
+module.exports = PredefinedProducts;

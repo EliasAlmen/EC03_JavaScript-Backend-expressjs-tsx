@@ -3,13 +3,18 @@ const express = require('express');
 const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser')
-// middleware
 
+// Middleware
 app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-const productsController = require('./controllers/productsController')
-app.use('/api/products', productsController)
+//Controller PredefinedProducts
+const PredefinedProductsController = require('./controllers/PredefinedProductsController')
+app.use('/api/predefinedproducts', PredefinedProductsController)
+
+//Controller CrudProducts
+const CrudProductsController = require('./controllers/CrudProductsController')
+app.use('/api/crudproducts', CrudProductsController)
 
 app.listen(port, () => console.log(`webApi is running on http://localhost:${port}`));
