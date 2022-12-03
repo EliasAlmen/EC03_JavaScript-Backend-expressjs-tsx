@@ -6,11 +6,11 @@ const bodyParser = require('body-parser')
 
 // Middleware
 app.use(cors())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 //Controller PredefinedProducts
-const PredefinedProductsController = require('./controllers/PredefinedProductsController')
+const PredefinedProductsController = require('./controllers/PredefinedProductsController').default
 app.use('/api/products', PredefinedProductsController)
 
 //Controller CrudProducts

@@ -1,15 +1,5 @@
-const PredefinedProducts = [
-    {
-        tag: "",
-        articleNumber: "d3984cd9-f121-4981-8d03-83198d441379",
-        name: "Black coat",
-        description: "",
-        category: "Coats",
-        price: 95,
-        rating: 4,
-        imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/black-coat.png",
-    },
+const products = [
+    { tag: "", articleNumber: "d3984cd9-f121-4981-8d03-83198d441379", name: "Black coat", description: "", category: "Coats", price: 95, rating: 4, imageName: "https://win22imgstorage.blob.core.windows.net/images/black-coat.png" },
     {
         tag: "",
         articleNumber: "20222c00-4548-4149-9efd-49883e9f57b5",
@@ -19,10 +9,10 @@ const PredefinedProducts = [
         price: 88,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/black-dress.png",
+            "https://win22imgstorage.blob.core.windows.net/images/black-dress.png"
     },
     {
-        tag: "",
+        tag: "flashtwo",
         articleNumber: "19173bb6-20e1-4f81-ae63-c969a23e794e",
         name: "Black top & pants set",
         description: "",
@@ -30,10 +20,10 @@ const PredefinedProducts = [
         price: 107,
         rating: 3,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/black-set.png",
+            "https://win22imgstorage.blob.core.windows.net/images/black-set.png"
     },
     {
-        tag: "",
+        tag: "flashtwo",
         articleNumber: "4bf6d7af-aa33-455c-9403-8301ea13071c",
         name: "White top & black pants set",
         description: "",
@@ -41,10 +31,10 @@ const PredefinedProducts = [
         price: 115,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/black-white-set.png",
+            "https://win22imgstorage.blob.core.windows.net/images/black-white-set.png"
     },
     {
-        tag: "",
+        tag: "flashtwo",
         articleNumber: "77e280d3-7c56-41d0-8b48-1e5c8a4f1605",
         name: "Blue jacket",
         description: "",
@@ -52,10 +42,10 @@ const PredefinedProducts = [
         price: 299,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/blue-jacket.png",
+            "https://win22imgstorage.blob.core.windows.net/images/blue-jacket.png"
     },
     {
-        tag: "",
+        tag: "flashtwo",
         articleNumber: "a268e0d8-010a-44c4-b4f0-738a01117573",
         name: "Blue hoody & pants",
         description: "",
@@ -63,10 +53,10 @@ const PredefinedProducts = [
         price: 150,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/blue-set.png",
+            "https://win22imgstorage.blob.core.windows.net/images/blue-set.png"
     },
     {
-        tag: "",
+        tag: "flashtwo",
         articleNumber: "267e6b12-d558-49de-92c2-6b2a59433ce9",
         name: "Blue t-shirt",
         description: "",
@@ -74,10 +64,10 @@ const PredefinedProducts = [
         price: 25,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/blue-tshirt.png",
+            "https://win22imgstorage.blob.core.windows.net/images/blue-tshirt.png"
     },
     {
-        tag: "",
+        tag: "flashone",
         articleNumber: "cda0aa8d-c0e1-41a7-ae26-343ffc84e141",
         name: "Brown sweater",
         description: "",
@@ -85,10 +75,10 @@ const PredefinedProducts = [
         price: 35,
         rating: 4,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/brown-sweater.png",
+            "https://win22imgstorage.blob.core.windows.net/images/brown-sweater.png"
     },
     {
-        tag: "",
+        tag: "flashone",
         articleNumber: "bf1fffeb-c30b-4380-8384-223d3c80b792",
         name: "Brown watch",
         description: "",
@@ -96,10 +86,10 @@ const PredefinedProducts = [
         price: 150,
         rating: 3,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/brown-watch.png",
+            "https://win22imgstorage.blob.core.windows.net/images/brown-watch.png"
     },
     {
-        tag: "",
+        tag: "flashone",
         articleNumber: "6c871493-805c-45e9-b66a-d62dd511c930",
         name: "Stiletto shoes",
         description: "",
@@ -107,10 +97,10 @@ const PredefinedProducts = [
         price: 89,
         rating: 3,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/chrome-shoe.png",
+            "https://win22imgstorage.blob.core.windows.net/images/chrome-shoe.png"
     },
     {
-        tag: "",
+        tag: "flashone",
         articleNumber: "086841a8-fb2e-4ee6-80b1-4dce62e168ae",
         name: "Gray t-shirt",
         description: "",
@@ -118,7 +108,7 @@ const PredefinedProducts = [
         price: 15,
         rating: 3,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/gray-tshirt.png",
+            "https://win22imgstorage.blob.core.windows.net/images/gray-tshirt.png"
     },
     {
         tag: "",
@@ -129,7 +119,7 @@ const PredefinedProducts = [
         price: 55,
         rating: 4,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/jeans-dress.png",
+            "https://win22imgstorage.blob.core.windows.net/images/jeans-dress.png"
     },
     {
         tag: "",
@@ -140,7 +130,7 @@ const PredefinedProducts = [
         price: 110,
         rating: 4,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/jeans-set.png",
+            "https://win22imgstorage.blob.core.windows.net/images/jeans-set.png"
     },
     {
         tag: "",
@@ -151,7 +141,7 @@ const PredefinedProducts = [
         price: 19,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/olive-sweater.png",
+            "https://win22imgstorage.blob.core.windows.net/images/olive-sweater.png"
     },
     {
         tag: "featured",
@@ -162,7 +152,7 @@ const PredefinedProducts = [
         price: 25,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/multicolor-tshirt.png",
+            "https://win22imgstorage.blob.core.windows.net/images/multicolor-tshirt.png"
     },
     {
         tag: "featured",
@@ -173,7 +163,7 @@ const PredefinedProducts = [
         price: 99,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/purple-bag.png",
+            "https://win22imgstorage.blob.core.windows.net/images/purple-bag.png"
     },
     {
         tag: "featured",
@@ -184,7 +174,7 @@ const PredefinedProducts = [
         price: 105,
         rating: 5,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/red-bag.png",
+            "https://win22imgstorage.blob.core.windows.net/images/red-bag.png"
     },
     {
         tag: "featured",
@@ -195,7 +185,7 @@ const PredefinedProducts = [
         price: 67,
         rating: 3,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/red-dress.png",
+            "https://win22imgstorage.blob.core.windows.net/images/red-dress.png"
     },
     {
         tag: "featured",
@@ -206,7 +196,7 @@ const PredefinedProducts = [
         price: 45,
         rating: 4,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/striped-top.png",
+            "https://win22imgstorage.blob.core.windows.net/images/striped-top.png"
     },
     {
         tag: "featured",
@@ -217,7 +207,7 @@ const PredefinedProducts = [
         price: 36,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/striped-pants.png",
+            "https://win22imgstorage.blob.core.windows.net/images/striped-pants.png"
     },
     {
         tag: "featured",
@@ -228,7 +218,7 @@ const PredefinedProducts = [
         price: 25,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/white-sweater.png",
+            "https://win22imgstorage.blob.core.windows.net/images/white-sweater.png"
     },
     {
         tag: "featured",
@@ -239,7 +229,7 @@ const PredefinedProducts = [
         price: 85,
         rating: 2,
         imageName:
-            "https://win22imgstorage.blob.core.windows.net/images/winter-boots.png",
+            "https://win22imgstorage.blob.core.windows.net/images/winter-boots.png"
     },
 ];
-module.exports = PredefinedProducts;
+module.exports = products;
