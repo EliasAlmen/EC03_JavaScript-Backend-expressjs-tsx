@@ -1,7 +1,15 @@
 const products = [
-    { tag: "", articleNumber: "d3984cd9-f121-4981-8d03-83198d441379", name: "Black coat", description: "", category: "Coats", price: 95, rating: 4, imageName: "https://win22imgstorage.blob.core.windows.net/images/black-coat.png" },
+    { 
+        tag: "rankingone", 
+        articleNumber: "d3984cd9-f121-4981-8d03-83198d441379", 
+        name: "Black coat", 
+        description: "", 
+        category: "Coats", 
+        price: 95, 
+        rating: 4, 
+        imageName: "https://win22imgstorage.blob.core.windows.net/images/black-coat.png" },
     {
-        tag: "",
+        tag: "rankingone",
         articleNumber: "20222c00-4548-4149-9efd-49883e9f57b5",
         name: "Black dress",
         description: "",
@@ -111,7 +119,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/gray-tshirt.png"
     },
     {
-        tag: "",
+        tag: "rankingone",
         articleNumber: "c9a6a993-cd15-4022-8858-77a5bcb6cc12",
         name: "Jeans dress",
         description: "",

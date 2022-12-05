@@ -3,7 +3,7 @@ const express = require("express")
 const controller = express.Router();
 let products = require("../data/PredefinedProducts_database")
 
-controller.param('articleNumber', (httpRequest, httpResponse, next, articleNumber) => {
+controller.param('/articleNumber', (httpRequest, httpResponse, next, articleNumber) => {
     httpRequest.product = products.find(x => x.articleNumber == articleNumber);
     next();
 });
@@ -16,7 +16,7 @@ controller.route('/details/:articleNumber').get((httpRequest, httpResponse) => {
 });
 
 controller.param('tag', (httpRequest, httpResponse, next, tag) => {
-    httpRequest.product = products.filter(e => e.tag == tag)
+    httpRequest.products = products.filter(e => e.tag == tag)
     next();
 });
 
@@ -33,6 +33,10 @@ controller.route('/:tag/:take').get((httpRequest, httpResponse) => {
         tempList.push(httpRequest.products[i])
     
     httpResponse.status(200).json(tempList);
+});
+
+controller.route('/').get((httpRequest, httpResponse) => {
+    httpResponse.status(200).json(products);
 });
 
 
