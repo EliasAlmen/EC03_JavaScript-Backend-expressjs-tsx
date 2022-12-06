@@ -1,6 +1,6 @@
 const { request, response } = require("express");
 const express = require("express");
-let crudProducts = require("../data/crudProducts_database");
+let crudProducts = require("../db/db-CrudProducts");
 const controller = express.Router();
 
 controller.param("id", (httpRequest, httpResponse, next, id) => {
@@ -13,7 +13,7 @@ controller
     .route('/')
     .post((httpRequest, httpResponse) => {
         let crudProduct = {
-            id:crudProducts[crudProducts.length - 1]?.id > 0? crudProducts[crudProducts.length - 1]?.id + 1: 1,
+            id: crudProducts[crudProducts.length - 1]?.id > 0 ? crudProducts[crudProducts.length - 1]?.id + 1 : 1,
             name: httpRequest.body.name,
             category: httpRequest.body.category,
             description: httpRequest.body.description,

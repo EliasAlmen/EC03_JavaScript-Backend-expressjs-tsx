@@ -1,20 +1,32 @@
-const port = process.env.PORT || 5000
-const cors = require('cors')
-const bodyParser = require('body-parser')
-const express = require('express')
-const app = express()
+require('dotenv').config()
+const port = process.env.PORT;
+const mongodb = require('./mongodbServer');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
 
 // Middleware
-app.use(cors())
-app.use(express.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.json());
 
 //Controller PredefinedProducts
-const PredefinedProductsController = require('./controllers/PredefinedProductsController')
+const PredefinedProductsController = require('./controllers/controller-PredefinedProducts')
 app.use('/api/products', PredefinedProductsController)
 
 //Controller CrudProducts
-const CrudProductsController = require('./controllers/CrudProductsController')
+const CrudProductsController = require('./controllers/controller-CrudProducts')
 app.use('/api/crudproducts', CrudProductsController)
 
+//Controller MongoProducts
+const MongoProductController = require('./controllers/controller-MongoProducts')
+app.use('/api/mongoproducts', MongoProductController)
+
+// mongoDB
+
+mongodb();
+
+// express
 app.listen(port, () => console.log(`webApi is running on http://localhost:${port}`));
