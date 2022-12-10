@@ -24,9 +24,13 @@ app.use('/api/crudproducts', CrudProductsController)
 const MongoProductController = require('./controllers/controller-MongoProducts')
 app.use('/api/mongoproducts', MongoProductController)
 
+//Controller MongoAuth
+const MongoAuthController = require('./controllers/controller-auth')
+app.use('/api/mongousers', MongoAuthController)
+
 // mongoDB
 
 mongodb();
 
 // express
-app.listen(port, () => console.log(`webApi is running on http://localhost:${port}`));
+app.listen(port, () => console.log(`webApi is listening on http://localhost:${port}`));
