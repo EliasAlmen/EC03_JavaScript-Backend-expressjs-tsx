@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const mongoProductSchema = mongoose.Schema({
     id: { type: mongoose.Schema.Types.ObjectId },
     name: { type: String, required: true },
-    category: { type: String },
     description: { type: String },
+    category: { type: String },
     tag: { type: String },
-    rating: { type: Number },
     price: { type: Number, required: true },
+    rating: { type: Number },
     imageName: { type: String }
 })
 

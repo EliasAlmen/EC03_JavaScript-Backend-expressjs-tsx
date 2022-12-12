@@ -8,7 +8,7 @@ const mongoProductSchema = require('../schemas/mongoProductSchema')
 controller.route('/')
     .get(async (req, res) => {
         const products = []
-        const list = await mongoProductSchema.find({ tag: req.params.tag })
+        const list = await mongoProductSchema.find()
         if (list) {
             for (let product of list) {
                 products.push({
@@ -71,7 +71,7 @@ controller.route('/:tag/:take')
         else
             res.status(400).json()
     })
-controller.route('/product/details/:articleNumber')
+controller.route('/mongo/details/:articleNumber')
     .get(async (req, res) => {
         const product = await mongoProductSchema.findById(req.params.articleNumber)
         if (product) {
@@ -130,5 +130,29 @@ controller.route('/:articleNumber')
             res.status(404).json({text: `MongoProduct ${req.params.articleNumber} not found.`})
         }
 })
-
+controller.route('/mongo/update/:articleNumber')
+    .put((httpRequest, httpResponse) => {
+        if (httpRequest.crudProduct != undefined) {
+            crudProducts.forEach((crudProduct) => {
+                if (crudProduct.id == httpRequest.crudProduct.id) {
+                    crudProduct.name = httpRequest.body.name
+                        ? httpRequest.body.name
+                        : crudProduct.name;
+                    crudProduct.category = httpRequest.body.category
+                        ? httpRequest.body.category
+                        : crudProduct.category;
+                    crudProduct.description = httpRequest.body.description
+                        ? httpRequest.body.description
+                        : crudProduct.description;
+                    crudProduct.rating = httpRequest.body.rating
+                        ? httpRequest.body.rating
+                        : crudProduct.rating;
+                    crudProduct.price = httpRequest.body.price
+                        ? httpRequest.body.price
+                        : crudProduct.price;
+                }
+            });
+            httpResponse.status(200).json(httpRequest.crudProduct);
+        } else httpResponse.status(404).json;
+    })
 module.exports = controller;
