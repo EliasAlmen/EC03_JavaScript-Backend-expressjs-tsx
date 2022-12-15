@@ -8,7 +8,8 @@ controller.param('/articleNumber', (httpRequest, httpResponse, next, articleNumb
     next();
 });
 
-controller.route('/details/:articleNumber').get((httpRequest, httpResponse) => {
+controller.route('/details/:articleNumber')
+    .get((httpRequest, httpResponse) => {
     if (httpRequest.product != undefined)
         httpResponse.status(200).json(httpRequest.product)
     else
@@ -20,14 +21,16 @@ controller.param('tag', (httpRequest, httpResponse, next, tag) => {
     next();
 });
 
-controller.route('/:tag').get((httpRequest, httpResponse) => {
+controller.route('/:tag')
+    .get((httpRequest, httpResponse) => {
     if (httpRequest.products != undefined)
         httpResponse.status(200).json(httpRequest.products);
     else
         httpResponse.status(404).json();
 });
 
-controller.route('/:tag/:take').get((httpRequest, httpResponse) => {
+controller.route('/:tag/:take')
+    .get((httpRequest, httpResponse) => {
     let tempList = []
     for (let i = 0; i < Number(httpRequest.params.take); i++)
         tempList.push(httpRequest.products[i])
@@ -35,7 +38,8 @@ controller.route('/:tag/:take').get((httpRequest, httpResponse) => {
     httpResponse.status(200).json(tempList);
 });
 
-controller.route('/').get((httpRequest, httpResponse) => {
+controller.route('/')
+    .get((httpRequest, httpResponse) => {
     httpResponse.status(200).json(products);
 });
 

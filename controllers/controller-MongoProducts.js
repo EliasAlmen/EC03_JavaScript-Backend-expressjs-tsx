@@ -1,6 +1,5 @@
-const express = require("express")
+const express = require("express");
 const controller = express.Router();
-// const { auth } = require('../middleware/middleware-auth')
 const mongoProductSchema = require('../schemas/mongoProductSchema')
 
 
@@ -92,67 +91,64 @@ controller.route('/mongo/details/:articleNumber')
 // Auth routes
 controller.route('/')
     .post(async (req, res) => {
-    const { name, description, category, tag, price, rating, imageName } = req.body
+        const { name, description, category, tag, price, rating, imageName } = req.body
 
-    if (!name || !price)
-        res.status(400).json({ text: 'Name price.' })
+        if (!name || !price)
+            res.status(400).json({ text: 'Name price.' })
 
-    const duplicated = await mongoProductSchema.findOne({ name })
-    if (duplicated)
-        res.status(409).json({ text: 'Error: Name is currently occupied in database.' })
-    else {
-        const product = await mongoProductSchema.create({
-            name,
-            description,
-            category,
-            tag,
-            price,
-            rating,
-            imageName
-        })
-        if (product)
-            res.status(201).json({text: `Success! created: ${product._id}.`})
-        else
-            res.status(400).json({ text: '400 error, something went wrong.' })
-    }
-})
+        const duplicated = await mongoProductSchema.findOne({ name })
+        if (duplicated)
+            res.status(409).json({ text: 'Error: Name is currently occupied in database.' })
+        else {
+            const product = await mongoProductSchema.create({
+                name,
+                description,
+                category,
+                tag,
+                price,
+                rating,
+                imageName
+            })
+            if (product)
+                res.status(201).json({ text: `Success! created: ${product._id}.` })
+            else
+                res.status(400).json({ text: '400 error, something went wrong.' })
+        }
+    })
 controller.route('/:articleNumber')
     .delete(async (req, res) => {
         if (!req.params.articleNumber) {
             res.status(400).json('Cant delete MongoProduct, no data.')
         }
-        
+
         const mongoProduct = await mongoProductSchema.findById(req.params.articleNumber)
         if (mongoProduct) {
-            await mongoProductSchema.remove(mongoProduct)
-            res.status(200).json({text: `MongoProduct ${req.params.articleNumber} deleted.`})
+            await mongoProductSchema.deleteOne(mongoProduct)
+            res.status(200).json({ text: `MongoProduct ${req.params.articleNumber} deleted.` })
         } else {
-            res.status(404).json({text: `MongoProduct ${req.params.articleNumber} not found.`})
+            res.status(404).json({ text: `MongoProduct ${req.params.articleNumber} not found.` })
         }
-})
-controller.route('/mongo/update/:articleNumber')
-    .put((httpRequest, httpResponse) => {
-        if (httpRequest.crudProduct != undefined) {
-            crudProducts.forEach((crudProduct) => {
-                if (crudProduct.id == httpRequest.crudProduct.id) {
-                    crudProduct.name = httpRequest.body.name
-                        ? httpRequest.body.name
-                        : crudProduct.name;
-                    crudProduct.category = httpRequest.body.category
-                        ? httpRequest.body.category
-                        : crudProduct.category;
-                    crudProduct.description = httpRequest.body.description
-                        ? httpRequest.body.description
-                        : crudProduct.description;
-                    crudProduct.rating = httpRequest.body.rating
-                        ? httpRequest.body.rating
-                        : crudProduct.rating;
-                    crudProduct.price = httpRequest.body.price
-                        ? httpRequest.body.price
-                        : crudProduct.price;
-                }
-            });
-            httpResponse.status(200).json(httpRequest.crudProduct);
-        } else httpResponse.status(404).json;
     })
+controller.route('/mongo/update/:articleNumber')
+    .put(async (req, res) => {
+        if (!req.params.articleNumber) {
+            res.status(400).json({ text: 'Cant find MongoProduct, no data.' })
+        }
+        console.log(req.params.articleNumber);
+        console.log(req.body)
+
+        const product = await mongoProductSchema.findByIdAndUpdate(req.params.articleNumber, req.body, { new: true })
+
+        if (!product) {
+            return res.status(404).json({ text: 'could not find that product' })
+        }
+
+        res.status(200).json(product)
+
+    })
+
+
+
+
+
 module.exports = controller;

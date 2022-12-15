@@ -130,7 +130,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/jeans-dress.png"
     },
     {
-        tag: "",
+        tag: "rankingtwo",
         articleNumber: "431255c5-eea7-40bd-9260-06ad7e83fbcd",
         name: "Jeans jacket & pants",
         description: "",
@@ -141,7 +141,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/jeans-set.png"
     },
     {
-        tag: "",
+        tag: "rankingtwo",
         articleNumber: "133740ce-f0fe-4ebf-936d-3319237743e2",
         name: "Olive sweater",
         description: "",
@@ -152,7 +152,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/olive-sweater.png"
     },
     {
-        tag: "featured",
+        tag: "rankingtwo",
         articleNumber: "dafda4ec-f15e-4e23-b223-b9f037a894a7",
         name: "Multicolor t-shirt",
         description: "",
@@ -163,7 +163,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/multicolor-tshirt.png"
     },
     {
-        tag: "featured",
+        tag: "rankingthree",
         articleNumber: "b3044087-7272-4885-9da7-69b1b769fa3b",
         name: "Purple handbag",
         description: "",
@@ -174,7 +174,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/purple-bag.png"
     },
     {
-        tag: "featured",
+        tag: "rankingthree",
         articleNumber: "1721de3f-4104-4a8f-b090-fb385c446146",
         name: "Red handbag",
         description: "",
@@ -185,7 +185,7 @@ const products = [
             "https://win22imgstorage.blob.core.windows.net/images/red-bag.png"
     },
     {
-        tag: "featured",
+        tag: "rankingthree",
         articleNumber: "fab80814-1d85-4c31-a6df-4c0385a1607b",
         name: "Red dress",
         description: "",
