@@ -38,9 +38,9 @@ controller.route('/login').post(async (req, res) => {
         res.status(400).json({ text: 'Please provide name and password.' })
     
     const checkExistsUser = await mongoUsersSchema.findOne({ name })
-    if (checkExistsUser && await bcrypt.compare(password, user.password)) {
+    if (checkExistsUser && await bcrypt.compare(password, checkExistsUser.password)) {
         res.status(200).json({
-            accessToken: generateAccessToken(user._id)
+            accessToken: generateAccessToken(checkExistsUser._id)
         })
     } else {
         res.status(400).json({ text: 'Wrong password or username.' })

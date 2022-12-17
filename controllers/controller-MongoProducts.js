@@ -1,7 +1,7 @@
 const express = require("express");
 const controller = express.Router();
 const mongoProductSchema = require('../schemas/mongoProductSchema')
-
+const { auth } = require('../middleware/middleware-auth')
 
 // public routes
 controller.route('/')
@@ -90,7 +90,7 @@ controller.route('/mongo/details/:articleNumber')
 
 // Auth routes
 controller.route('/')
-    .post(async (req, res) => {
+    .post(auth, async (req, res) => {
         const { name, description, category, tag, price, rating, imageName } = req.body
 
         if (!name || !price)
@@ -116,7 +116,7 @@ controller.route('/')
         }
     })
 controller.route('/:articleNumber')
-    .delete(async (req, res) => {
+    .delete(auth, async (req, res) => {
         if (!req.params.articleNumber) {
             res.status(400).json('Cant delete MongoProduct, no data.')
         }
@@ -130,7 +130,7 @@ controller.route('/:articleNumber')
         }
     })
 controller.route('/mongo/update/:articleNumber')
-    .put(async (req, res) => {
+    .put(auth, async (req, res) => {
         if (!req.params.articleNumber) {
             res.status(400).json({ text: 'Cant find MongoProduct, no data.' })
         }
