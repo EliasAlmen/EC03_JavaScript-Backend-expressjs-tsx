@@ -2,7 +2,7 @@ const products = [
     { 
         tag: "rankingone", 
         articleNumber: "d3984cd9-f121-4981-8d03-83198d441379", 
-        name: "Black coat", 
+        name: "Svart kappa", 
         description: "", 
         category: "Coats", 
         price: 95, 
@@ -11,7 +11,7 @@ const products = [
     {
         tag: "rankingone",
         articleNumber: "20222c00-4548-4149-9efd-49883e9f57b5",
-        name: "Black dress",
+        name: "Svart klänning",
         description: "",
         category: "Dresses",
         price: 88,
@@ -22,7 +22,7 @@ const products = [
     {
         tag: "flashtwo",
         articleNumber: "19173bb6-20e1-4f81-ae63-c969a23e794e",
-        name: "Black top & pants set",
+        name: "Svart topp & byxa set",
         description: "",
         category: "Sets",
         price: 107,
@@ -33,7 +33,7 @@ const products = [
     {
         tag: "flashtwo",
         articleNumber: "4bf6d7af-aa33-455c-9403-8301ea13071c",
-        name: "White top & black pants set",
+        name: "Vit topp & svarta byxor",
         description: "",
         category: "Sets",
         price: 115,
@@ -44,7 +44,7 @@ const products = [
     {
         tag: "flashtwo",
         articleNumber: "77e280d3-7c56-41d0-8b48-1e5c8a4f1605",
-        name: "Blue jacket",
+        name: "Blå jacka",
         description: "",
         category: "Jackets",
         price: 299,
@@ -55,7 +55,7 @@ const products = [
     {
         tag: "flashtwo",
         articleNumber: "a268e0d8-010a-44c4-b4f0-738a01117573",
-        name: "Blue hoody & pants",
+        name: "Blå huvtröja och byxor",
         description: "",
         category: "Sets",
         price: 150,
@@ -66,7 +66,7 @@ const products = [
     {
         tag: "flashtwo",
         articleNumber: "267e6b12-d558-49de-92c2-6b2a59433ce9",
-        name: "Blue t-shirt",
+        name: "Blå t-shirt",
         description: "",
         category: "T-Shirts",
         price: 25,
@@ -77,7 +77,7 @@ const products = [
     {
         tag: "flashone",
         articleNumber: "cda0aa8d-c0e1-41a7-ae26-343ffc84e141",
-        name: "Brown sweater",
+        name: "Brun tröja",
         description: "",
         category: "Sweaters",
         price: 35,
@@ -88,7 +88,7 @@ const products = [
     {
         tag: "flashone",
         articleNumber: "bf1fffeb-c30b-4380-8384-223d3c80b792",
-        name: "Brown watch",
+        name: "Brun klocka",
         description: "",
         category: "Watches",
         price: 150,
@@ -99,7 +99,7 @@ const products = [
     {
         tag: "flashone",
         articleNumber: "6c871493-805c-45e9-b66a-d62dd511c930",
-        name: "Stiletto shoes",
+        name: "Stilettskor",
         description: "",
         category: "Shoes",
         price: 89,
@@ -110,7 +110,7 @@ const products = [
     {
         tag: "flashone",
         articleNumber: "086841a8-fb2e-4ee6-80b1-4dce62e168ae",
-        name: "Gray t-shirt",
+        name: "Grå t-shirt",
         description: "",
         category: "T-Shirts",
         price: 15,
@@ -121,7 +121,7 @@ const products = [
     {
         tag: "rankingone",
         articleNumber: "c9a6a993-cd15-4022-8858-77a5bcb6cc12",
-        name: "Jeans dress",
+        name: "Jeansklänning",
         description: "",
         category: "Jeans",
         price: 55,
@@ -132,7 +132,7 @@ const products = [
     {
         tag: "rankingtwo",
         articleNumber: "431255c5-eea7-40bd-9260-06ad7e83fbcd",
-        name: "Jeans jacket & pants",
+        name: "Jeansjacka & byxor",
         description: "",
         category: "Sets",
         price: 110,
@@ -143,7 +143,7 @@ const products = [
     {
         tag: "rankingtwo",
         articleNumber: "133740ce-f0fe-4ebf-936d-3319237743e2",
-        name: "Olive sweater",
+        name: "Oliv tröja",
         description: "",
         category: "Sweaters",
         price: 19,
@@ -154,7 +154,7 @@ const products = [
     {
         tag: "rankingtwo",
         articleNumber: "dafda4ec-f15e-4e23-b223-b9f037a894a7",
-        name: "Multicolor t-shirt",
+        name: "Flerfärgad t-shirt",
         description: "",
         category: "T-shirts",
         price: 25,
@@ -165,7 +165,7 @@ const products = [
     {
         tag: "rankingthree",
         articleNumber: "b3044087-7272-4885-9da7-69b1b769fa3b",
-        name: "Purple handbag",
+        name: "Lila handväska",
         description: "",
         category: "Bags",
         price: 99,
@@ -176,7 +176,7 @@ const products = [
     {
         tag: "rankingthree",
         articleNumber: "1721de3f-4104-4a8f-b090-fb385c446146",
-        name: "Red handbag",
+        name: "Röd handväska",
         description: "",
         category: "Bags",
         price: 105,
@@ -187,7 +187,7 @@ const products = [
     {
         tag: "rankingthree",
         articleNumber: "fab80814-1d85-4c31-a6df-4c0385a1607b",
-        name: "Red dress",
+        name: "Röd klänning",
         description: "",
         category: "Dresses",
         price: 67,
@@ -198,7 +198,7 @@ const products = [
     {
         tag: "featured",
         articleNumber: "6e42e94a-7aac-4b65-8dc1-2ba735383f9e",
-        name: "Striped top",
+        name: "Randig topp",
         description: "",
         category: "Tops",
         price: 45,
@@ -209,7 +209,7 @@ const products = [
     {
         tag: "featured",
         articleNumber: "1920e1c5-c1c9-41b9-a485-1384972474eb",
-        name: "Striped pink pants",
+        name: "Randiga rosa byxor",
         description: "",
         category: "Pants",
         price: 36,
@@ -220,7 +220,7 @@ const products = [
     {
         tag: "featured",
         articleNumber: "dbb4a5f2-be55-4931-b19e-54db48bc752a",
-        name: "White seater",
+        name: "Vit tröja",
         description: "",
         category: "Sweaters",
         price: 25,
@@ -231,7 +231,7 @@ const products = [
     {
         tag: "featured",
         articleNumber: "684a9d63-c7e2-446b-99df-eafdd31426b1",
-        name: "Winter boots",
+        name: "Vinterkängor",
         description: "",
         category: "Shoes",
         price: 85,

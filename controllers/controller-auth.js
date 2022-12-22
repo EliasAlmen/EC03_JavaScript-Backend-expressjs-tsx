@@ -6,7 +6,7 @@ const { generateAccessToken } = require('../middleware/middleware-auth')
 
 const mongoUsersSchema = require('../schemas/mongoUsersSchema')
 
-// public routes
+
 controller.route('/register').post(async (req, res) => {
     const { name, password } = req.body
     

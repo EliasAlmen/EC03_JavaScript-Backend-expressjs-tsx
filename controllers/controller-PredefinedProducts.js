@@ -3,12 +3,12 @@ const express = require("express")
 const controller = express.Router();
 let products = require("../db/db-PredefinedProducts")
 
-controller.param('/articleNumber', (httpRequest, httpResponse, next, articleNumber) => {
-    httpRequest.product = products.find(x => x.articleNumber == articleNumber);
+controller.param('articleNumber', (httpRequest, httpResponse, next, articleNumber) => {
+    httpRequest.product = products.find(product => product.articleNumber == articleNumber);
     next();
 });
 
-controller.route('/details/:articleNumber')
+controller.route('/:articleNumber')
     .get((httpRequest, httpResponse) => {
     if (httpRequest.product != undefined)
         httpResponse.status(200).json(httpRequest.product)
